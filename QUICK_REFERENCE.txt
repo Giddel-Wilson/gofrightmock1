@@ -1,0 +1,55 @@
+╔════════════════════════════════════════════════════════════════╗
+║        CARGO TRACKING SYSTEM - QUICK REFERENCE                 ║
+╠════════════════════════════════════════════════════════════════╣
+║ STATUS: ✅ RUNNING                                             ║
+║ SERVER: http://localhost:8000                                  ║
+╠════════════════════════════════════════════════════════════════╣
+║ LOGIN CREDENTIALS                                              ║
+╠════════════════════════════════════════════════════════════════╣
+║ ADMIN LOGIN    → http://localhost:8000/admin-login.php        ║
+║   Username: admin                                              ║
+║   Password: admin                                              ║
+║                                                                ║
+║ CUSTOMER LOGIN → http://localhost:8000/signin.php             ║
+║   Username: testcustomer                                       ║
+║   Password: password                                           ║
+║                                                                ║
+║ DRIVER LOGIN   → http://localhost:8000/driver-login.php       ║
+║   Username: testdriver                                         ║
+║   Password: password                                           ║
+╠════════════════════════════════════════════════════════════════╣
+║ KEY URLS                                                       ║
+╠════════════════════════════════════════════════════════════════╣
+║ Home Page:  http://localhost:8000/home/home.php               ║
+║ Track:      http://localhost:8000/track.php                   ║
+║ Dashboard:  http://localhost:8000/index.php (after admin login)║
+╠════════════════════════════════════════════════════════════════╣
+║ DATABASE                                                       ║
+╠════════════════════════════════════════════════════════════════╣
+║ Name:     cargo                                                ║
+║ User:     root                                                 ║
+║ Password: (none)                                               ║
+║ Host:     localhost                                            ║
+╠════════════════════════════════════════════════════════════════╣
+║ COMMANDS                                                       ║
+╠════════════════════════════════════════════════════════════════╣
+║ Start Server:  ./start-server.sh                              ║
+║ Stop Server:   Press Ctrl+C                                    ║
+║ MySQL CLI:     mysql -u root cargo                             ║
+╚════════════════════════════════════════════════════════════════╝
+
+FEATURES:
+✓ Customer Registration & Login
+✓ Place Cargo Orders
+✓ Automatic Cost Calculation  
+✓ Real-time Tracking
+✓ Driver Management
+✓ Payment Processing (M-Pesa)
+✓ Admin Dashboard
+✓ Reports & Analytics
+
+DOCUMENTATION:
+→ SERVER_STATUS.md - Complete server information
+→ SETUP.md - Setup instructions
+→ database.sql - Database schema
+→ .env - Configuration file

@@ -1,0 +1,202 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                                                                              ║
+║                         🚚 GOFREIGHT CARGO TRACKING                          ║
+║                        Complete Rebranding & Deployment                      ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ ✅ REBRANDING COMPLETE                                                       │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+  ✓ 49 files updated with "GoFreight" branding
+  ✓ 0 references to "Roy Transmotors" remaining
+  ✓ Database admin email: admin@gofreight.com
+  ✓ All headers, footers, and titles updated
+  ✓ Copyright notices updated to 2017-2025
+
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ 📊 DATABASE SETUP - CHOOSE YOUR PROVIDER                                    │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────┬──────────────┬────────────┬────────────┬──────────────────────┐
+│ Provider    │ Best For     │ Free Tier  │ Paid       │ Recommendation       │
+├─────────────┼──────────────┼────────────┼────────────┼──────────────────────┤
+│ Railway     │ Quick Deploy │ $5 credit  │ Pay-as-go  │ ⭐⭐⭐⭐⭐ Best Choice  │
+│ PlanetScale │ Serverless   │ 5GB        │ $29/mo     │ ⭐⭐⭐⭐ Good          │
+│ AWS RDS     │ Enterprise   │ 12 months  │ $15/mo     │ ⭐⭐⭐ Advanced       │
+│ Heroku      │ PHP Apps     │ 5MB        │ $10/mo     │ ⭐⭐⭐ Traditional    │
+│ cPanel      │ Budget       │ None       │ $3/mo      │ ⭐⭐ Cheapest        │
+└─────────────┴──────────────┴────────────┴────────────┴──────────────────────┘
+
+🎯 RECOMMENDED: Railway (Easiest + Free Tier)
+
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ 🚀 HOSTING SETUP - CHOOSE YOUR PLATFORM                                     │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────┬───────────┬──────────────┬──────────┬───────────────────┐
+│ Platform        │ Setup     │ Cost/Month   │ Effort   │ Best For          │
+├─────────────────┼───────────┼──────────────┼──────────┼───────────────────┤
+│ Railway         │ 10 min    │ Free → $5    │ ⭐       │ Fast deployment   │
+│ Heroku          │ 20 min    │ $17          │ ⭐⭐     │ Mature platform   │
+│ DigitalOcean    │ 15 min    │ $20          │ ⭐⭐     │ Reliability       │
+│ cPanel Hosting  │ 30 min    │ $3           │ ⭐       │ Low budget        │
+│ Vercel          │ N/A       │ N/A          │ ❌       │ NOT COMPATIBLE    │
+└─────────────────┴───────────┴──────────────┴──────────┴───────────────────┘
+
+⚠️  IMPORTANT: Vercel does NOT support PHP applications!
+    To use Vercel, you must rebuild the entire app in Next.js
+
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ 📝 STEP-BY-STEP: RAILWAY DEPLOYMENT (RECOMMENDED)                           │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+STEP 1: Create Railway Account
+   → Visit: https://railway.app/
+   → Sign up with GitHub (free)
+
+STEP 2: Provision MySQL Database
+   → Click "New Project"
+   → Select "Provision MySQL"
+   → Wait for deployment (2-3 minutes)
+
+STEP 3: Get Database Credentials
+   → Click on MySQL service
+   → Go to "Variables" tab
+   → Copy these values:
+     • MYSQLHOST
+     • MYSQLUSER  
+     • MYSQLPASSWORD
+     • MYSQLDATABASE
+
+STEP 4: Update Your .env File
+   → Open: /Users/maintenance/Documents/Cargo-Tracking-System-master/.env
+   → Replace with:
+
+   DB_SERVER=containers-us-west-xxx.railway.app
+   DB_USER=root
+   DB_PASS=your_railway_password
+   DB_NAME=railway
+   SERVER_PORT=8080
+   SERVER_HOST=0.0.0.0
+   APP_ENV=production
+
+STEP 5: Import Database Schema
+   → In terminal, run:
+   
+   mysql -h containers-us-west-xxx.railway.app \
+         -u root \
+         -p'your_password' \
+         railway < database.sql
+
+STEP 6: Deploy Application to Railway
+   → Push code to GitHub
+   → In Railway: "New Project" → "Deploy from GitHub"
+   → Select your repository
+   → Railway auto-detects PHP and deploys
+
+STEP 7: Set Environment Variables in Railway
+   → In Railway project settings
+   → Add variables from your .env file
+   → Railway will restart automatically
+
+STEP 8: Test Your Deployment
+   → Railway provides a URL like: gofreight.up.railway.app
+   → Visit: https://gofreight.up.railway.app/home/home.php
+   → Login and test all features
+
+STEP 9 (Optional): Add Custom Domain
+   → In Railway settings
+   → Click "Add Domain"
+   → Follow DNS instructions
+
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ 🔐 SECURITY CHECKLIST FOR PRODUCTION                                        │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+  □ Add .env to .gitignore (never commit passwords!)
+  □ Change default admin password from "admin"
+  □ Enable HTTPS (Railway does this automatically)
+  □ Restrict database access by IP whitelist
+  □ Enable database SSL/TLS connections
+  □ Set up automatic database backups
+  □ Update PHP session settings for security
+  □ Remove test accounts (testcustomer, testdriver)
+  □ Configure proper error logging (don't show errors to users)
+  □ Enable CORS properly if using API endpoints
+
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ 📚 DOCUMENTATION REFERENCE                                                   │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+  📄 DEPLOYMENT_SUMMARY.md     → Quick overview and next steps
+  📄 MYSQL_SETUP_GUIDE.md      → Detailed database setup (all providers)
+  📄 VERCEL_DEPLOYMENT.md      → Full hosting guide (all platforms)
+  📄 SETUP.md                  → Local development setup
+  📄 QUICK_REFERENCE.txt       → Login credentials and URLs
+
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ 🎯 YOUR CURRENT STATUS                                                       │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+  ✅ Codebase reviewed and fixed
+  ✅ Company rebranded to GoFreight
+  ✅ Local database created and populated
+  ✅ Development server running at http://localhost:8000
+  ✅ All login credentials documented
+  ✅ Comprehensive deployment guides created
+
+  ⏭️  NEXT: Choose database provider (Railway recommended)
+  ⏭️  NEXT: Set up production database
+  ⏭️  NEXT: Choose hosting platform (Railway recommended)
+  ⏭️  NEXT: Deploy and go live!
+
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ 💡 QUICK TIPS                                                                │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+  • For fastest deployment: Use Railway for both database AND hosting
+  • For cheapest option: Use cPanel hosting with shared MySQL
+  • For best scalability: Use AWS RDS + DigitalOcean App Platform
+  • For Vercel: Requires complete rebuild in Next.js (2-4 weeks)
+
+  • Test everything locally before deploying
+  • Keep your .env file secure
+  • Set up monitoring and logging
+  • Configure email notifications for orders
+
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ 🆘 GETTING HELP                                                              │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+  Database connection issues:
+    → Read MYSQL_SETUP_GUIDE.md section on SSL/TLS
+
+  Deployment problems:
+    → Read VERCEL_DEPLOYMENT.md for platform-specific guides
+
+  Code errors:
+    → Check includes/db_connection.php for database settings
+    → Verify .env file has correct values
+
+  General questions:
+    → All guides are in the project root directory
+    → Start with DEPLOYMENT_SUMMARY.md
+
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                                                                              ║
+║                          🎉 YOU'RE READY TO DEPLOY!                          ║
+║                                                                              ║
+║                   Read DEPLOYMENT_SUMMARY.md to get started                  ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
